@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "1a05cd1e-f2ac-4b94-a7ba-00e9688055b9",
+		"name": "toDo- API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add-todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"task\":\"sleep\",\n    \"status\":\"incomplete\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3010/addToDo",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"addToDo"
+					]
+				},
+				"description": "This API is used add your work in the TODO list"
+			},
+			"response": [
+				{
+					"name": "add-todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"task\":\"sleep\",\n    \"status\":\"incomplete\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3010/addToDo",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"addToDo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-gTFPgJUtZra7FgRts9uPAEsxngA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 05:46:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"result\": \"Task Is Added\"\n}"
+				},
+				{
+					"name": "add-todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"incomplete\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3010/addToDo",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"addToDo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-Pd5n1b1LeH6GfnQV0OHwnedrq0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 05:47:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"info\": \"Key Is Missing\"\n}"
+				},
+				{
+					"name": "add-todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"task\":\"sleep\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3010/addToDo",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"addToDo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"29-Pd5n1b1LeH6GfnQV0OHwnedrq0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 05:47:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"info\": \"Key Is Missing\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get-todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3010/getToDo",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"getToDo"
+					]
+				},
+				"description": "This API is to to show the TODO list data."
+			},
+			"response": [
+				{
+					"name": "get-todo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/getToDo",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"getToDo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "241"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f1-5gR2zFgZGNOfT6ao/iziFC27t/E\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 05:48:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"result\": [\n        {\n            \"_id\": \"602de58ed96bd1100fc1e2a4\",\n            \"task\": \"talk\",\n            \"status\": \"incomplete\"\n        },\n        {\n            \"_id\": \"602dfeaaea3a5618576c9a43\",\n            \"task\": \"walk\",\n            \"status\": \"incomplete\"\n        },\n        {\n            \"_id\": \"602dff1bc085d51b0444b407\",\n            \"task\": \"sleep\",\n            \"status\": \"incomplete\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "delete-todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3010/deleteToDo/602de58ed96bd1100fc1e2a4",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"deleteToDo",
+						"602de58ed96bd1100fc1e2a4"
+					]
+				},
+				"description": "This API is used to delete the TODO list data."
+			},
+			"response": [
+				{
+					"name": "delete-todo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3010/deleteToDo/602de58ed96bd1100fc1e2a4",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"deleteToDo",
+								"602de58ed96bd1100fc1e2a4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-DCfFD7BYR48rV/7voe7GK8D2zMY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 05:49:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"result\": \"Task Has Been Deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update-todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":\"completed\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3010/updateToDo/602dff1bc085d51b0444b407",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"updateToDo",
+						"602dff1bc085d51b0444b407"
+					]
+				},
+				"description": "This API is used to updated the TODO list Data."
+			},
+			"response": [
+				{
+					"name": "update-todo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"completed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3010/updateToDo/602dff1bc085d51b0444b407",
+							"host": [
+								"localhost"
+							],
+							"port": "3010",
+							"path": [
+								"updateToDo",
+								"602dff1bc085d51b0444b407"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33-V2EayVOntVWsXzm3xa8ycQz6gNM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Feb 2021 05:50:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"result\": \"Status Has Been Updated\"\n}"
+				}
+			]
+		}
+	]
+}
