@@ -11,7 +11,7 @@ var queries = {};
  * @author Abhishek Singh
  */
 queries.insertToDoList = function insertToDoList(data, callback) {
-  db().collection('users').insertOne(data, (err, result) => {
+  db().collection('todoTask').insertOne(data, (err, result) => {
     callback(err, result);
   });
 };
@@ -22,7 +22,7 @@ queries.insertToDoList = function insertToDoList(data, callback) {
 * @author ABHISHEK SINGH
 */
 queries.findToDoList = function findToDoList(query, cb) {
-  db().collection('users').find(query)
+  db().collection('todoTask').find(query)
     .toArray((err, result) => {
       cb(err, result);
     });
@@ -34,7 +34,7 @@ queries.findToDoList = function findToDoList(query, cb) {
 * @author ABHISHEK SINGH
 */
 queries.deleteToDoList = function deleteToDoList(query, cb) {
-  db().collection('users').deleteOne(query, (err, result) => {
+  db().collection('todoTask').deleteOne(query, (err, result) => {
     cb(err, result);
   });
 };
@@ -45,7 +45,7 @@ queries.deleteToDoList = function deleteToDoList(query, cb) {
 * @author ABHISHEK SINGH
 */
 queries.changeToDoList = function changeToDoList(query, toUpdate, cb) {
-  db().collection('users').updateOne(query, toUpdate, (err, result) => {
+  db().collection('todoTask').updateOne(query, toUpdate, (err, result) => {
     cb(err, result);
   });
 };
