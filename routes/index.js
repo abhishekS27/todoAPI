@@ -5,7 +5,7 @@
 
 const express = require('express');
 const toDoManagement =require('./toDoManagement.js');
-
+const userManagement =require('./userManagement.js');
 const router = express.Router();
 
 
@@ -41,6 +41,16 @@ API for updating the todo list.
 */
 router.put('/updateToDo/:id', (req, res) => {
     toDoManagement.updateToDoList(req, res);
+});
+
+router.post('/addUsers',(req,res)=>{
+    console.log("data",req);
+    userManagement.addUser(req,res);
+})
+
+router.put('/updateUser', (req, res) => {
+    console.log("here is data");
+    userManagement.updateUsers(req, res);
 });
 
 module.exports = router;

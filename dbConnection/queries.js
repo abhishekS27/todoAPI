@@ -16,6 +16,12 @@ queries.insertToDoList = function insertToDoList(data, callback) {
   });
 };
 
+queries.insertUsers = function insertUsers(data, callback) {
+  db().collection('users').insertOne(data, (err, result) => {
+    callback(err, result);
+  });
+};
+
 /**
 * This method is used to get the todo list.
 * @method findToDoList
@@ -23,6 +29,12 @@ queries.insertToDoList = function insertToDoList(data, callback) {
 */
 queries.findToDoList = function findToDoList(query, cb) {
   db().collection('todoTask').find(query)
+    .toArray((err, result) => {
+      cb(err, result);
+    });
+};
+queries.findUsers = function findUsers(query, cb) {
+  db().collection('users').find(query)
     .toArray((err, result) => {
       cb(err, result);
     });
